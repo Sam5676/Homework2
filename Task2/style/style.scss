@@ -1,0 +1,242 @@
+$main-font: 16px;
+$main-padding: 3%;
+
+@font-face{
+	font-family: logo-font;
+	src: url(../src/fonts/Baloo-google-font.ttf);
+}
+
+*{
+	/*font-size: $main-font;*/
+	padding: 0;
+	margin: 0;
+	color: white;
+}
+
+body{
+	background-color: #223344;
+}
+
+header{
+	height: 12vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: baseline;
+	background-color: hsl(27, 100%, 45%);
+
+	span.logo, span.bookmark, span.search{
+		font-size: 20px;
+		flex-grow: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	h1{
+		font-family: logo-font;
+		font-size: 30px;
+		flex-grow: 15;
+		display: flex;
+		align-items: center;
+	}
+}
+
+nav{
+	background-color: hsl(27, 100%, 45%);
+	padding-bottom: 10px;
+	ul{
+		padding-left: 5%;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		li{
+			list-style: none;
+			flex-grow: 0.035;
+
+			a{
+				text-decoration: none;
+				color: white;
+			}
+			a:hover{
+				color: white;
+			}
+		}
+	}
+
+}
+
+main{
+	display: flex;
+	width: 100%;
+
+	aside{
+		flex: 1;
+		border-right: 1px solid #252525;
+		padding: 20px 15px;
+		box-shadow: 0 6px 20px #252525;
+
+		li{
+			list-style: none;
+		}
+
+		a{
+			color: white;
+			/*text-decoration: underline;*/
+		}
+		a:hover{
+			color: white;
+		}
+	}
+
+	div.section-container{
+		flex:8;
+
+		section.subtitle1{
+			padding: 2vh $main-padding;
+
+			h2{
+				font-size: 25px;
+			}
+		}
+
+		section.sort2{
+			button:nth-child(2){
+				color: hsl(27, 100%, 45%);;
+			}
+			
+			span{
+				padding-left: $main-padding;
+			}
+
+			button{
+				background-color: transparent;
+				margin-left: 2vw;
+				border: none;
+			}
+		}
+
+		section.sort2::after{
+			content: "";
+			margin-top: 2vh;
+			display: block;
+			border-top: 1px solid rgba(245, 245, 245, 0.5);
+		}
+
+		section.main-list-films{
+			margin-top: 10px;
+		}
+
+		section.main-list-films>div{
+			background-color: rgba(75, 85, 100, 1);
+			padding: 0;
+			height: 45vh;
+			border: 7px solid #234;
+			border-radius: 2px;
+		}
+
+		section.main-list-films>div:hover::before{
+			content: "Comedy";
+			font-size: 16px;
+			text-align: center;
+			padding-top: 10%;
+			width: 100%;
+			height: 10vh;
+			background-image: linear-gradient( to top, rgba(20, 30, 40, 0.3), rgba(20, 30, 40, 1));
+			position: absolute;
+		}
+
+
+		div.movies-title{
+			padding: 5px 5px 0;
+		}
+
+		div.movies-title>a{
+			color: white;
+		}
+
+		div.movies-title>a:hover{
+			text-decoration: none;
+		}
+
+		a.stars{
+			display: block;
+		}
+
+		a.stars>span{
+			color: orange;
+		}
+
+		a.stars>span:last-child{
+			color: gray;
+		}
+
+
+		img.each-movie-picture{
+			width: 100%;
+			height: 75%;
+			object-fit: cover;
+			border-radius: 2px;
+		}
+
+		div.rate-and-quality{
+			display: flex;
+			padding: 0 10px;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		a.dvd{
+			float: right;
+			display: inline-block;
+		}
+
+		a.dvd>img{
+			width: 55px;
+		}
+	}
+
+	section.pagination{
+		font-size: 20px;
+
+		a{
+			padding-left: 20px;
+			color: white;
+		}
+
+		a:nth-child(2){
+			color: gray;
+		}
+
+		a:hover{
+			color: white;
+			text-decoration: none;
+		}
+	}
+
+	section.information-about-us{
+		padding: 15px 20px 100px;
+	}
+}
+
+footer{
+	background-color: hsl(200, 3%, 25%);
+	height: 12vh;
+	padding-top: 30px;
+
+	a{
+		color: gray;
+	}
+
+	a:hover{
+		color: gray;
+		text-decoration: none;
+	}
+
+	button{
+		background-color: transparent;
+		color: gray;
+		border: none;
+		margin-right: 3vw;
+		float: right;
+	}
+}
